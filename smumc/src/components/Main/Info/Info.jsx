@@ -1,10 +1,10 @@
 import * as S from "./Info.style";
-import Logo from "../../../assets/logo.webp";
+import Logo from "../../../assets/main-logo.webp";
 
 const Info = () => {
   return (
     <S.Container>
-      <img src={Logo} width={"410px"} />
+      <img src={Logo} width={"460px"} />
       <div>
         <h1>
           <b>U</b>niversity <b>M</b>akeUs <b>C</b>hallenge

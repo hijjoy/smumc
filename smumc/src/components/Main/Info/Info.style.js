@@ -14,7 +14,7 @@ const Container = styled.div`
   display: flex;
 
   img {
-    margin-right: 90px;
+    margin-right: 80px;
   }
 
   div {
@@ -26,7 +26,7 @@ const Container = styled.div`
       word-break: keep-all;
       width: 50px;
       font-size: 55px;
-      margin-bottom: 30px;
+      margin-bottom: 45px;
 
       b {
         animation: ${changeColor} 1s 0s infinite linear alternate;
@@ -35,6 +35,7 @@ const Container = styled.div`
 
     p {
       font-size: 16px;
+      word-break: keep-all;
       b {
         font-family: "Pretendard-Bold";
         color: ${theme.COLOR.LIGHT_GREEN};
@@ -59,6 +60,19 @@ const Container = styled.div`
         opacity: 0.9;
         color: black;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 50px;
+
+    img {
+      margin: 0;
+    }
+
+    div {
+      margin-top: 10px;
     }
   }
 `;
