@@ -4,7 +4,7 @@ import theme from "../../../../theme";
 const Container = styled.div`
   ${theme.ALIGN.COLUMN_CENTER}
   background-color: ${theme.COLOR.WHITE};
-  width: 50%;
+  width: 200px;
   height: 200px;
   margin: 10px;
   border-radius: 10px;

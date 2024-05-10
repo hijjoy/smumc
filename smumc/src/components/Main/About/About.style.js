@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  width: 65%;
+  width: 60%;
   height: 400px;
   position: relative;
 
@@ -30,7 +30,6 @@ const ContextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
 
   h1 {
     font-family: ${theme.FONT.PRETENDARD_BOLD};
@@ -38,11 +37,22 @@ const ContextWrapper = styled.div`
     margin-bottom: 35px;
     letter-spacing: 2px;
     font-size: 45px;
+    margin-top: 50px;
   }
+`;
 
-  div {
-    ${theme.ALIGN.ROW_CENTER};
+const TextWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 5px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
   }
+`;
+
+const TextWrapper2 = styled(TextWrapper)`
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 const TextBox = styled.span`
@@ -57,7 +67,7 @@ const TextBox = styled.span`
   color: ${theme.COLOR.PRIMARY};
 
   border-radius: 30px;
-  margin: 20px 10px 10px;
+  margin: 10px 0;
 `;
 
 const TextBox2 = styled(TextBox)`
@@ -74,12 +84,16 @@ const TextBox3 = styled(TextBox)`
 const Wrapper = styled.div`
   position: absolute;
   bottom: -25%;
-  width: 85%;
+  width: 1000px;
   z-index: 1;
 
   div {
     ${theme.ALIGN.ROW_CENTER}
   }
+
+  @media screen and (max-width: 768px) {
+    bottom: -40%;
+  }
 `;
 
-export { Container, ContextWrapper, TextBox, TextBox2, TextBox3, Wrapper, LImg, RImg };
+export { Container, TextWrapper, TextWrapper2, ContextWrapper, TextBox, TextBox2, TextBox3, Wrapper, LImg, RImg };

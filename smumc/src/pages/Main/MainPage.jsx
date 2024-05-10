@@ -1,5 +1,5 @@
 import * as S from "./MainPage.style";
-import { About, Info } from "../../components";
+import { About, AnimatedComponent, Info, New, Project } from "../../components";
 
 const MainPage = () => {
   return (
@@ -7,12 +7,15 @@ const MainPage = () => {
       <S.Wrapper>
         <Info />
       </S.Wrapper>
-      <S.Wrapper>
+      <AnimatedComponent>
         <About />
-      </S.Wrapper>
-      <S.Wrapper>
-        <div>ㅠㅠ</div>
-      </S.Wrapper>
+      </AnimatedComponent>
+      <AnimatedComponent>
+        <Project />
+      </AnimatedComponent>
+      <AnimatedComponent>
+        <New />
+      </AnimatedComponent>
     </S.Container>
   );
 };
