@@ -5,5 +5,6 @@ import Info from "./Main/Info/Info";
 import New from "./Main/New/New";
 import AnimatedComponent from "./AnimatedComponentㄴ/AnimatedComponent";
 import Project from "./Main/Project/Project";
+import Part from "./Main/Part/Part";
 
-export { Footer, Navbar, About, Info, New, Project, AnimatedComponent };
+export { Footer, Navbar, About, Info, New, Project, AnimatedComponent, Part };

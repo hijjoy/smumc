@@ -35,6 +35,7 @@ const Project = () => {
           </S.Copy>
         </S.SliderWrapper>
       </S.SliderContainer>
+      <S.GoWrapper to="/projects">더 많은 프로젝트 보러가기 →</S.GoWrapper>
     </S.Container>
   );
 };

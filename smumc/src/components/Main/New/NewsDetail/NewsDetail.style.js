@@ -14,7 +14,7 @@ const Container = styled.div`
     object-fit: cover;
   }
 
-  opacity: ${(props) => (props.$isHover ? "0.85" : "0")};
+  opacity: ${(props) => (props.$isHover ? "1" : "0")};
   transition: all 700ms ease-in-out 0s;
 `;
 

@@ -15,10 +15,14 @@ const Container = styled.div`
     color: ${theme.COLOR.LIGHT_GREEN};
   }
 
-  img {
-    margin-top: 3px;
+  h3 {
+    color: #fff;
+    font-family: ${theme.FONT.PRETENDARD_BOLD};
     margin-left: 40px;
-    width: 90px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: ${theme.COLOR.PRIMARY};
+    cursor: pointer;
   }
 `;
 

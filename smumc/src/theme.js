@@ -4,6 +4,7 @@ const COLOR = {
   LIGHT_GREEN: "#b1bfb0",
   GRAY: "#7b7c81",
   WHITE: "#fff",
+  DARK_GRAY: "#181818",
 };
 
 const ALIGN = {

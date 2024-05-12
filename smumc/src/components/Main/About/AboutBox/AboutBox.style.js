@@ -8,11 +8,14 @@ const Container = styled.div`
   height: 200px;
   margin: 10px;
   border-radius: 10px;
-  border: 2px solid ${theme.COLOR.GRAY};
+  border: 0px solid ${theme.COLOR.GRAY};
+
   color: black;
 
   &:hover {
     box-shadow: 0 0 18px 2px ${theme.COLOR.GRAY};
+    transform: scale(1.02);
+    transition: all 600ms ease-in-out 0s;
   }
 
   p {

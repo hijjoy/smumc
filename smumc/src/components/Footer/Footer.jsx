@@ -4,13 +4,14 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 import { GrLocationPin } from "react-icons/gr";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { CONTECT_INFOS } from "../../constants/info";
 
 const Footer = () => {
   return (
     <S.Container>
       <S.TextWrapper>
         <h3>SMUMC</h3>
-        <p>Develop By 차다인 김용민 박지환 김지영 정혜원</p>
+        <p>{CONTECT_INFOS[1].data}</p>
       </S.TextWrapper>
       <S.IconWrapper>
         <S.InfoWrapper>
@@ -20,14 +21,14 @@ const Footer = () => {
           </div>
           <div>
             <CiMail />
-            <p>dydals3440@gmail.com</p>
+            <p>{CONTECT_INFOS[0].data}</p>
           </div>
         </S.InfoWrapper>
         <div>
-          <Link to="https://open.kakao.com/o/s0svOsWf">
+          <Link to={CONTECT_INFOS[2].data}>
             <IoChatbubblesOutline />
           </Link>
-          <Link to="https://www.instagram.com/smu_makeus_challenge/">
+          <Link to={CONTECT_INFOS[3].data}>
             <FaInstagram />
           </Link>
         </div>

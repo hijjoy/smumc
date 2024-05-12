@@ -6,7 +6,7 @@ const Container = styled.div`
 
   h1 {
     font-family: ${theme.FONT.PRETENDARD_BOLD};
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 80px;
     opacity: 0.9;
   }

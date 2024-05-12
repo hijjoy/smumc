@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../theme";
 
-const Container = styled.header`
+const Container = styled.div`
   color: #fff;
   height: 100%;
 `;

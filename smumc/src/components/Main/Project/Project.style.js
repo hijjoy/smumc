@@ -1,6 +1,7 @@
 import styled, { keyframes, css } from "styled-components";
 import theme from "../../../theme";
 import { changeColor } from "../Info/Info.style";
+import { Link } from "react-router-dom";
 
 const infiniteAnimation1 = keyframes`
     0% {
@@ -29,6 +30,8 @@ const infiniteAnimation2 = keyframes`
 const Container = styled.div`
   ${theme.ALIGN.COLUMN_CENTER}
   width: 100%;
+  height: 55%;
+  position: relative;
 
   h1 {
     font-family: ${theme.FONT.PRETENDARD_BOLD};
@@ -117,9 +120,9 @@ const ProjectBox = styled.div`
     right: 10px;
     bottom: 10px;
     font-family: ${theme.FONT.PRETENDARD_MEDIUM};
-    font-size: 15px;
+    font-size: 14px;
     background-color: ${theme.COLOR.GRAY};
-    padding: 3px 10px;
+    padding: 3px 12px;
     border-radius: 10px;
   }
 
@@ -129,4 +132,21 @@ const ProjectBox = styled.div`
   }
 `;
 
-export { Container, SliderContainer, SliderWrapper, Original, Copy, ProjectBox };
+const GoWrapper = styled(Link)`
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  font-size: 14px;
+  color: ${theme.COLOR.GRAY};
+  padding: 5px 10px;
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(1, 255, 111, 0.1);
+    color: ${theme.COLOR.PRIMARY};
+  }
+`;
+
+export { Container, SliderContainer, SliderWrapper, Original, Copy, ProjectBox, GoWrapper };
