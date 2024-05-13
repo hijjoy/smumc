@@ -2,16 +2,21 @@ import * as S from "./About.style";
 import AboutBox from "./AboutBox/AboutBox";
 import codeImg from "../../../assets/code.webp";
 import smileImg from "../../../assets/smile.webp";
+import codeLight from "../../../assets/code_light.webp";
+import smileLight from "../../../assets/smile_light.webp";
 import { MEMBERS } from "../../../constants/members";
+import { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const About = () => {
   const allMemberCount = MEMBERS.length;
   const currMemberCount = MEMBERS.filter((m) => m.year === 6).length;
+  const { nowTheme } = useContext(ThemeContext);
 
   return (
     <S.Container>
-      <S.RImg src={codeImg} />
-      <S.LImg src={smileImg} />
+      <S.RImg src={nowTheme ? codeImg : codeLight} />
+      <S.LImg src={nowTheme ? smileImg : smileLight} />
       <S.ContextWrapper>
         <h1>SMUMC</h1>
         <S.TextWrapper>

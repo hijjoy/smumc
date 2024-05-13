@@ -1,6 +1,6 @@
 import * as S from "./Info.style";
 import Logo from "../../../assets/main-logo.webp";
-import LogoLight from "../../../assets/logoLight.webp";
+import LogoLight from "../../../assets/main-logo-light.webp";
 import { useContext } from "react";
 import { ThemeContext } from "../../../context/ThemeContext";
 
