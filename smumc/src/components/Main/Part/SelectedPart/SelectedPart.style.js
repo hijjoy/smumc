@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   button {
     border: none;
     background-color: initial;
-    color: #fff;
+    color: ${(props) => props.theme.textColor};
     font-size: 20px;
     margin: 10px 20px 30px;
     padding-bottom: 3px;
@@ -23,12 +23,12 @@ const Wrapper = styled.div`
       cursor: pointer;
       transform: scale(1.03);
       transition: transform 600ms ease-in-out 0s;
-      color: ${theme.COLOR.PRIMARY};
+      color: ${(props) => props.theme.primary};
     }
 
     &.selected {
-      color: ${theme.COLOR.PRIMARY};
-      border-bottom: 2px solid ${theme.COLOR.PRIMARY};
+      color: ${(props) => props.theme.primary};
+      border-bottom: 2px solid ${(props) => props.theme.primary};
     }
   }
 `;
@@ -40,7 +40,10 @@ const TextBox = styled.div`
   word-break: keep-all;
   text-align: center;
   font-size: 15px;
-  background-color: ${theme.COLOR.DARK_GRAY};
+  font-family: ${(props) =>
+    props.theme === theme.darkTheme ? theme.FONT.PRETENDARD_REGULAR : theme.FONT.PRETENDARD_MEDIUM};
+  color: ${(props) => props.theme.textColor};
+  background-color: ${(props) => props.theme.footerColor};
   border-radius: 20px;
   padding: 0 50px;
   word-spacing: 0.4px;

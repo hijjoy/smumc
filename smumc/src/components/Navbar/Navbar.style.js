@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../theme";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Container = styled.div`
   ${theme.ALIGN.ROW_SPACE_BETWEEN}
@@ -9,19 +10,13 @@ const Container = styled.div`
   width: 100%;
   height: 80px;
 
-  h1 {
-    margin-left: 30px;
-    font-family: "Pretendard-Bold";
-    color: ${theme.COLOR.LIGHT_GREEN};
-  }
-
   h3 {
     color: #fff;
     font-family: ${theme.FONT.PRETENDARD_BOLD};
     margin-left: 40px;
     letter-spacing: 2px;
     font-size: 20px;
-    color: ${theme.COLOR.PRIMARY};
+    color: ${(props) => props.theme.primary};
     cursor: pointer;
   }
 `;
@@ -36,15 +31,41 @@ const Wrapper = styled.div`
 
     &:hover {
       font-family: "Pretendard-Medium";
-      color: ${theme.COLOR.WHITE};
+      color: ${(props) => props.theme.textColor};
       cursor: pointer;
     }
 
     &.active {
       font-family: "Pretendard-Medium";
-      color: ${theme.COLOR.WHITE};
+      color: ${(props) => props.theme.textColor};
     }
   }
 `;
 
-export { Container, Wrapper };
+const DarkIcon = styled(MdOutlineDarkMode)`
+  color: ${theme.COLOR.GRAY};
+  width: 20px;
+  height: 20px;
+  margin-bottom: -6px;
+  margin-right: 5px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+`;
+
+const Lighticon = styled(MdOutlineLightMode)`
+  color: #ffc629;
+  width: 20px;
+  height: 20px;
+  margin-bottom: -6px;
+  margin-right: 5px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+`;
+
+export { Container, Wrapper, DarkIcon, Lighticon };

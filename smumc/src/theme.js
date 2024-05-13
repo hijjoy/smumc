@@ -7,6 +7,20 @@ const COLOR = {
   DARK_GRAY: "#181818",
 };
 
+const darkTheme = {
+  bgColor: "#0f1012",
+  textColor: "#f8f8f8",
+  footerColor: "#181818",
+  primary: "#11ff6e",
+};
+
+const lightTheme = {
+  bgColor: "#fff",
+  textColor: "#4d524d",
+  footerColor: "#F2F5F8",
+  primary: "#1ddb66",
+};
+
 const ALIGN = {
   ROW_CENTER: `
       display: flex;
@@ -33,6 +47,6 @@ const FONT = {
   PRETENDARD_BOLD: "Pretendard-Bold",
 };
 
-const theme = { COLOR, ALIGN, FONT };
+const theme = { COLOR, ALIGN, FONT, darkTheme, lightTheme };
 
 export default theme;

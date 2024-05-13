@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import theme from "../../../theme";
-import { changeColor } from "../Info/Info.style";
+import { changeColor, changeColorLight } from "../Info/Info.style";
 import { Link } from "react-router-dom";
 
 const infiniteAnimation1 = keyframes`
@@ -38,7 +38,14 @@ const Container = styled.div`
     letter-spacing: 3px;
     margin-bottom: 20px;
 
-    animation: ${changeColor} 1s 0s infinite linear alternate;
+    animation: ${(props) =>
+      props.theme === theme.darkTheme
+        ? css`
+            ${changeColor} 1s 0s infinite linear alternate
+          `
+        : css`
+            ${changeColorLight} 1s 0s infinite linear alternate
+          `};
   }
 
   h4 {
@@ -122,6 +129,7 @@ const ProjectBox = styled.div`
     font-family: ${theme.FONT.PRETENDARD_MEDIUM};
     font-size: 14px;
     background-color: ${theme.COLOR.GRAY};
+    color: #fff;
     padding: 3px 12px;
     border-radius: 10px;
   }
@@ -145,7 +153,7 @@ const GoWrapper = styled(Link)`
   &:hover {
     cursor: pointer;
     background-color: rgb(1, 255, 111, 0.1);
-    color: ${theme.COLOR.PRIMARY};
+    color: ${(props) => props.theme.primary};
   }
 `;
 

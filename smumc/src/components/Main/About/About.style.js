@@ -6,11 +6,14 @@ const Container = styled.div`
   justify-content: center;
 
   width: 60%;
-  height: 400px;
+  height: 430px;
   position: relative;
 
   border-radius: 10px;
-  background-color: rgb(123, 124, 129, 0.2);
+  background-color: ${(props) =>
+    props.theme === theme.darkTheme ? "rgb(123, 124, 129, 0.2)" : theme.lightTheme.footerColor};
+
+  border: ${(props) => (props.theme === theme.darkTheme ? "" : "2px solid #f5f6f9")};
 `;
 
 const RImg = styled.img`
@@ -34,7 +37,7 @@ const ContextWrapper = styled.div`
   h1 {
     font-family: ${theme.FONT.PRETENDARD_BOLD};
     opacity: 0.9;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     letter-spacing: 2px;
     font-size: 45px;
     margin-top: 50px;
@@ -60,11 +63,14 @@ const TextBox = styled.span`
 
   font-size: 12px;
   letter-spacing: 0.4px;
+  font-family: ${(props) =>
+    props.theme === theme.darkTheme ? theme.FONT.PRETENDARD_REGULAR : theme.FONT.PRETENDARD_MEDIUM};
 
   width: 95px;
   height: 30px;
-  background-color: rgb(1, 255, 111, 0.1);
-  color: ${theme.COLOR.PRIMARY};
+  background-color: ${(props) =>
+    props.theme === theme.darkTheme ? "rgb(1, 255, 111, 0.1)" : "rgb(86, 166, 121, 0.8)"};
+  color: ${(props) => (props.theme === theme.darkTheme ? props.theme.primary : "#fff")};
 
   border-radius: 30px;
   margin: 10px 0;
@@ -75,8 +81,10 @@ const TextBox2 = styled(TextBox)`
 `;
 
 const TextBox3 = styled(TextBox)`
-  background-color: rgb(120, 250, 230, 0.1);
-  color: rgb(120, 250, 230);
+  background-color: ${(props) =>
+    props.theme === theme.darkTheme ? "rgb(120, 250, 230, 0.1)" : "rgb(73, 186, 169,0.8)"};
+
+  color: ${(props) => (props.theme === theme.darkTheme ? "rgb(120, 250, 230)" : "#fff")};
   width: 70px;
   margin: 10px;
 `;

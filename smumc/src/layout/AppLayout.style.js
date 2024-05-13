@@ -5,6 +5,13 @@ const Container = styled.div`
   flex-direction: column;
 
   height: 100%;
+
+  background-color: ${(props) => props.theme.bgColor};
+  transition-property: background-color;
+  transition-timing-function: ease-in;
+  transition-duration: 400ms;
+
+  color: ${(props) => props.theme.textColor};
 `;
 
 const ContentWrapper = styled.div`

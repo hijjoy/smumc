@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 100%;
   height: 170px;
   color: ${theme.COLOR.GRAY};
-  background-color: #181818;
+  background-color: ${(props) => props.theme.footerColor};
 `;
 
 const TextWrapper = styled.div`
@@ -24,7 +24,7 @@ const TextWrapper = styled.div`
 
   h3 {
     font-family: "Pretendard-Bold";
-    color: ${theme.COLOR.LIGHT_GREEN};
+    color: ${(props) => (props.theme === theme.darkTheme ? theme.COLOR.LIGHT_GREEN : theme.lightTheme.textColor)};
     font-size: 25px;
     letter-spacing: 0.5px;
   }

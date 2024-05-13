@@ -12,9 +12,10 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  border: 3px solid #0f1012;
+  border: ${(props) => (props.theme === theme.darkTheme ? "3px solid #0f1012" : "3px solid #6b6b6b")};
   border-radius: 15px;
-  background-color: black;
+  background-color: ${(props) => (props.theme === theme.darkTheme ? "black" : "#363636")};
+  color: #fff;
 
   opacity: ${(props) => (props.$isHover ? "0.85" : "0")};
   transition: all 700ms ease-in-out 0s;

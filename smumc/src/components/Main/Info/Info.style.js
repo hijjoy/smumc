@@ -1,17 +1,24 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import theme from "../../../theme";
 
 const changeColor = keyframes`
   from {
-    color: ${theme.COLOR.WHITE};
+    color: inherit;
   }
   to {
-    color: ${theme.COLOR.PRIMARY};
-  }
+    color: ${theme.COLOR.PRIMARY}; }
 `;
+
+const changeColorLight = keyframes`
+from {
+  color : inherit;
+} to {
+  color: #1ddb66;
+}`;
 
 const Container = styled.div`
   display: flex;
+  color: ${(props) => props.theme.textColor};
 
   img {
     margin-right: 80px;
@@ -29,16 +36,25 @@ const Container = styled.div`
       margin-bottom: 45px;
 
       b {
-        animation: ${changeColor} 1s 0s infinite linear alternate;
+        animation: ${(props) =>
+          props.theme === theme.darkTheme
+            ? css`
+                ${changeColor} 1s 0s infinite linear alternate
+              `
+            : css`
+                ${changeColorLight} 1s 0s infinite linear alternate
+              `};
       }
     }
 
     p {
       font-size: 16px;
       word-break: keep-all;
+      font-family: ${(props) =>
+        props.theme === theme.darkTheme ? theme.FONT.PRETENDARD_LIGHT : theme.FONT.PRETENDARD_MEDIUM};
       b {
         font-family: "Pretendard-Bold";
-        color: ${theme.COLOR.LIGHT_GREEN};
+        color: ${(props) => (props.theme === theme.darkTheme ? theme.COLOR.LIGHT_GREEN : props.theme.primary)};
       }
     }
 
@@ -47,18 +63,19 @@ const Container = styled.div`
       padding: 10px;
       width: 200px;
       height: 40px;
-      border: 1px solid rgb(1, 255, 111, 0.5);
+      border: ${(props) =>
+        props.theme === theme.darkTheme ? "1px solid rgb(1, 255, 111, 0.5)" : "2px solid rgb(29, 219, 102, 0.5)"};
       border-radius: 10px;
       background-color: inherit;
-      color: ${theme.COLOR.WHITE};
+      color: ${(props) => props.theme.textColor};
       letter-spacing: 1px;
       font-family: "Pretendard-Bold";
 
       &:hover {
         cursor: pointer;
-        background-color: ${theme.COLOR.PRIMARY};
+        background-color: ${(props) => props.theme.primary};
         opacity: 0.9;
-        color: black;
+        color: ${(props) => (props.theme === theme.darkTheme ? "black" : theme.lightTheme.bgColor)};
       }
     }
   }
@@ -77,4 +94,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container, changeColor };
+export { Container, changeColor, changeColorLight };

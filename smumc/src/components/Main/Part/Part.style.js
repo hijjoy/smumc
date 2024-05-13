@@ -4,6 +4,7 @@ import theme from "../../../theme";
 const Container = styled.div`
   ${theme.ALIGN.COLUMN_CENTER}
   h1 {
+    color: ${(props) => props.theme.textColor};
     font-family: ${theme.FONT.PRETENDARD_BOLD};
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -11,7 +12,7 @@ const Container = styled.div`
   }
 
   b {
-    color: ${theme.COLOR.PRIMARY};
+    color: ${(props) => props.theme.primary};
   }
 `;
 
@@ -20,13 +21,13 @@ const Wrapper = styled.div`
 
   color: #fff;
   border-radius: 30px;
-  background-color: ${theme.COLOR.DARK_GRAY};
+  background-color: ${(props) => props.theme.footerColor};
   width: 500px;
 
   div {
     text-align: center;
     width: 33.3%;
-    background-color: #181818;
+    background-color: ${(props) => props.theme.footerColor};
     color: ${theme.COLOR.GRAY};
     font-family: ${theme.FONT.PRETENDARD_MEDIUM};
     font-size: 20px;

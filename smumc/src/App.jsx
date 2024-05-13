@@ -1,12 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import {
-  MainPage,
-  ProjectPage,
-  NoticePage,
-  MemberPage,
-  MemberDetail,
-} from "./pages/index";
+import { MainPage, ProjectPage, NoticePage, MemberPage, MemberDetail } from "./pages/index";
 import AppLayout from "./layout/AppLayout";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +36,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  const { nowTheme } = useContext(ThemeContext);
+
+  return (
+    <ThemeProvider theme={nowTheme ? theme.darkTheme : theme.lightTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;

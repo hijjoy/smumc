@@ -8,12 +8,14 @@ const Container = styled.div`
   height: 200px;
   margin: 10px;
   border-radius: 10px;
-  border: 0px solid ${theme.COLOR.GRAY};
+  border: ${(props) => (props.theme === theme.darkTheme ? "" : "2px solid #f5f6f9")};
+  box-shadow: ${(props) => (props.theme === theme.lightTheme ? "0 0  25px -7px rgba(173,173,173,0.3)" : "")};
 
-  color: black;
+  color: ${(props) => (props.theme === theme.darkTheme ? "black" : theme.lightTheme.textColor)};
 
   &:hover {
-    box-shadow: 0 0 18px 2px ${theme.COLOR.GRAY};
+    box-shadow: ${(props) =>
+      props.theme === theme.darkTheme ? `0 0 18px 2px ${theme.COLOR.GRAY}` : "0 0  25px -7px rgba(173,173,173,0.75)"};
     transform: scale(1.02);
     transition: all 600ms ease-in-out 0s;
   }

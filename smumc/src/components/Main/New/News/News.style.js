@@ -15,8 +15,8 @@ const Container = styled.div`
   width: 330px;
   height: 460px;
   border-radius: 20px;
-  border: 2px solid #424242;
-  background-color: #ededed;
+  border: ${(props) => (props.theme === theme.darkTheme ? "2px solid #424242" : "2px solid #ededed")};
+  background-color: ${(props) => (props.theme === theme.darkTheme ? "#ededed" : "#fff")};
   color: black;
 
   &:hover {

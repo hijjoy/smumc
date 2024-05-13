@@ -1,10 +1,15 @@
 import * as S from "./Info.style";
 import Logo from "../../../assets/main-logo.webp";
+import LogoLight from "../../../assets/logoLight.webp";
+import { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const Info = () => {
+  const { nowTheme } = useContext(ThemeContext);
+
   return (
     <S.Container>
-      <img src={Logo} width={"460px"} />
+      <img src={nowTheme ? Logo : LogoLight} width={"460px"} />
       <div>
         <h1>
           <b>U</b>niversity <b>M</b>akeUs <b>C</b>hallenge
