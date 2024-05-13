@@ -152,7 +152,7 @@ const GoWrapper = styled(Link)`
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(1, 255, 111, 0.1);
+    background-color: ${(props) => props.theme.secondary};
     color: ${(props) => props.theme.primary};
   }
 `;

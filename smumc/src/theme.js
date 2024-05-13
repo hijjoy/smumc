@@ -9,16 +9,18 @@ const COLOR = {
 
 const darkTheme = {
   bgColor: "#0f1012",
-  textColor: "#f8f8f8",
+  textColor: "#858585",
   footerColor: "#181818",
   primary: "#11ff6e",
+  secondary: "rgb(1, 255, 111, 0.1)",
 };
 
 const lightTheme = {
-  bgColor: "#fff",
+  bgColor: "#f0edef",
   textColor: "#4d524d",
-  footerColor: "#F2F5F8",
-  primary: "#1ddb66",
+  footerColor: "#e3e1e2",
+  primary: "#117439",
+  secondary: "#aedaab",
 };
 
 const ALIGN = {

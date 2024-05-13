@@ -50,7 +50,7 @@ const TextWrapper = styled.div`
   p {
     font-size: 11px;
     text-align: center;
-    background-color: rgb(1, 255, 111, 0.2);
+    background-color: ${(props) => (props.theme === theme.darkTheme ? "rgb(1, 255, 111, 0.2)" : "#c8e8c5")};
     color: ${theme.COLOR.GRAY};
     font-family: ${theme.FONT.PRETENDARD_MEDIUM};
     border-radius: 15px;

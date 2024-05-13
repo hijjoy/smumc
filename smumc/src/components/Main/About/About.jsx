@@ -27,8 +27,8 @@ const About = () => {
           <S.TextBox2>파트별 컨퍼런스</S.TextBox2>
         </S.TextWrapper>
         <S.TextWrapper2>
-          <S.TextBox3>열정</S.TextBox3>
-          <S.TextBox3>열정</S.TextBox3>
+          <S.TextBox3>열쩡</S.TextBox3>
+          <S.TextBox3>열쩡</S.TextBox3>
           <S.TextBox3>열정</S.TextBox3>
         </S.TextWrapper2>
       </S.ContextWrapper>

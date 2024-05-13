@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 
     &.selected {
       color: #fff;
-      background-color: #1ddb66;
+      background-color: ${(props) => props.theme.primary};
     }
   }
 `;

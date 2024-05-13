@@ -7,8 +7,14 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${theme.ALIGN.ROW_CENTER};
-  height: 100vh;
+  ${theme.ALIGN.COLUMN_CENTER};
+  height: 150vh;
+
+  h1 {
+    font-family: ${theme.FONT.PRETENDARD_BOLD};
+    opacity: 0.9;
+    margin-bottom: 80px;
+  }
 `;
 
 export { Container, Wrapper };

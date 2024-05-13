@@ -6,5 +6,6 @@ import New from "./Main/New/New";
 import AnimatedComponent from "./AnimatedComponentㄴ/AnimatedComponent";
 import Project from "./Main/Project/Project";
 import Part from "./Main/Part/Part";
+import Qna from "./QnA/Qna";
 
-export { Footer, Navbar, About, Info, New, Project, AnimatedComponent, Part };
+export { Footer, Navbar, About, Info, New, Project, AnimatedComponent, Part, Qna };

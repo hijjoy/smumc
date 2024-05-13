@@ -13,7 +13,7 @@ const changeColorLight = keyframes`
 from {
   color : inherit;
 } to {
-  color: #1ddb66;
+  color: #117439;
 }`;
 
 const Container = styled.div`
@@ -64,7 +64,7 @@ const Container = styled.div`
       width: 200px;
       height: 40px;
       border: ${(props) =>
-        props.theme === theme.darkTheme ? "1px solid rgb(1, 255, 111, 0.5)" : "2px solid rgb(29, 219, 102, 0.5)"};
+        props.theme === theme.darkTheme ? "1px solid rgb(1, 255, 111, 0.5)" : "2px solid rgb(17, 116, 57, 0.5)"};
       border-radius: 10px;
       background-color: inherit;
       color: ${(props) => props.theme.textColor};
