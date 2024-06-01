@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import theme from "../../theme";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { FaTree } from "react-icons/fa6";
+import { IoMenuSharp } from "react-icons/io5";
 
 const Container = styled.div`
   ${theme.ALIGN.ROW_SPACE_BETWEEN}
   position: fixed;
   top: 0;
+  z-index: 99;
 
   width: 100%;
   height: 80px;
@@ -40,6 +43,10 @@ const Wrapper = styled.div`
       color: ${(props) => props.theme.textColor};
     }
   }
+
+  @media ${theme.SCREEN_SIZE.TABLET} {
+    display: none;
+  }
 `;
 
 const DarkIcon = styled(MdOutlineDarkMode)`
@@ -55,10 +62,10 @@ const DarkIcon = styled(MdOutlineDarkMode)`
   }
 `;
 
-const Lighticon = styled(MdOutlineLightMode)`
-  color: #ffc629;
-  width: 20px;
-  height: 20px;
+const Lighticon = styled(FaTree)`
+  color: #117439;
+  width: 19px;
+  height: 19px;
   margin-bottom: -6px;
   margin-right: 5px;
 
@@ -68,4 +75,18 @@ const Lighticon = styled(MdOutlineLightMode)`
   }
 `;
 
-export { Container, Wrapper, DarkIcon, Lighticon };
+const HamBargerWrapper = styled(IoMenuSharp)`
+  display: none;
+  width: 20px;
+  height: 20px;
+  color: ${(props) => props.theme.primary};
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  @media ${theme.SCREEN_SIZE.TABLET} {
+    display: block;
+  }
+`;
+
+export { Container, Wrapper, DarkIcon, Lighticon, HamBargerWrapper };

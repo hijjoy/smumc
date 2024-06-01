@@ -364,7 +364,7 @@ const PROJECTS = [
     year: 5,
     member: ["가니/박가은", "니니/김유빈", "피딕/황인성", "세헌/호세헌"],
     stack: ["SWIFT", "SPRING"],
-    img: null,
+    img: "/5year/스포너스/sponus.png",
     release: "",
   },
   {
@@ -381,4 +381,6 @@ const PROJECTS = [
   },
 ];
 
-export { PROJECTS };
+const PROJECTS_YEAR = ["All", 5, 4, 3];
+
+export { PROJECTS, PROJECTS_YEAR };
